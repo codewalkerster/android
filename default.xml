@@ -5,8 +5,8 @@
            fetch="https://android.googlesource.com" />
 
   <remote  name="origin"
-           fetch="https://github.com/codewalkerster"
-           push="https://github.com/codewalkerster" />
+           fetch="https://github.com"
+           push="https://github.com" />
 
   <default revision="refs/tags/android-4.4.2_r2"
            remote="aosp"
