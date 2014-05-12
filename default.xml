@@ -4,14 +4,15 @@
   <remote  name="aosp"
            fetch="https://android.googlesource.com" >
 
-  <remote  name="github"
-           fetch="https://github.com/codewalkerster" />
+  <remote  name="origin"
+           fetch="https://github.com/codewalkerster"
+           push="https://github.com/codewalkerster" />
 
   <default revision="refs/tags/android-4.4.2_r2"
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="codewalker/android_build" groups="pdk" >
+  <project path="build" name="codewalkerster/android_build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
