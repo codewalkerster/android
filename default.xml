@@ -12,6 +12,16 @@
            remote="aosp"
            sync-j="4" />
 
+   <remote  name="github"
+           fetch=".."
+           review="review.cyanogenmod.org" />
+          
+  <default revision="refs/heads/cm-11.0"
+           remote="github"
+           sync-c="true"
+           sync-j="4" />
+
+
   <project path="build" name="codewalkerster/android_build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
