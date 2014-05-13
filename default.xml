@@ -54,6 +54,8 @@
   <project path="device/lge/mako-kernel" name="device/lge/mako-kernel" groups="device,mako" />
   <project path="device/sample" name="device/sample" groups="pdk" />
   <project path="device/samsung/manta" name="device/samsung/manta" groups="device,manta" />
+  <project path="device/hardkernel" name="android_device_hardkernel" remote="origin" revision="refs/tags/4412_v3.5" groups="device,manta" />
+    <copyfile src="build_android.sh" dest="build_android.sh" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
   <project path="external/android-clat" name="platform/external/android-clat" />
@@ -287,9 +289,7 @@
   <project path="hardware/akm" name="platform/hardware/akm" />
   <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="broadcom_wlan" />
-  <project path="hardware/hardkernel" name="android_hardware_hardkernel" remote="origin" revision="refs/tags/4412_v3.5" >
-    <copyfile src="build_android.sh" dest="build_android.sh" />
-  </project>
+  <project path="hardware/hardkernel" name="android_hardware_hardkernel" remote="origin" revision="refs/tags/4412_v3.5" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
   <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
   <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="origin" revision="refs/tags/4412_v3.5" groups="pdk" />
