@@ -54,7 +54,10 @@
   <project path="device/lge/mako-kernel" name="device/lge/mako-kernel" groups="device,mako" />
   <project path="device/sample" name="device/sample" groups="pdk" />
   <project path="device/samsung/manta" name="device/samsung/manta" groups="device,manta" />
-  <project path="device/hardkernel" name="android_device_hardkernel" remote="origin" revision="refs/tags/4412_v3.5" groups="device" >
+  <project path="device/hardkernel/odroidu" name="android_device_hardkernel_odroidu" remote="origin" revision="refs/tags/4412_v3.5" groups="device" />
+  <project path="device/hardkernel/odroidx" name="android_device_hardkernel_odroidx" remote="origin" revision="refs/tags/4412_v3.5" groups="device" />
+  <project path="device/hardkernel/odroidx2" name="android_device_hardkernel_odroidx2" remote="origin" revision="refs/tags/4412_v3.5" groups="device" />
+  <project path="device/hardkernel/proprietary" name="android_device_hardkernel_proprietary" remote="origin" revision="refs/tags/4412_v3.5" groups="device" >
     <copyfile src="build_android.sh" dest="build_android.sh" />
   </project>
   <project path="docs/source.android.com" name="platform/docs/source.android.com" />
