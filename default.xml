@@ -16,12 +16,12 @@
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="android_build" remote="origin" revision="refs/tags/4412_v3.5" groups="pdk" >
+  <project path="build" name="android_build" remote="origin" revision="refs/heads/odroid_4412_master" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" />
-  <project path="bionic" name="android_bionic" remote="origin" revision="refs/tags/4412_v3.5" groups="pdk" />
+  <project path="bionic" name="android_bionic" remote="origin" revision="refs/heads/odroid_4412_master" groups="pdk" />
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
   <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" />
   <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
@@ -54,10 +54,10 @@
   <project path="device/lge/mako-kernel" name="device/lge/mako-kernel" groups="device,mako" />
   <project path="device/sample" name="device/sample" groups="pdk" />
   <project path="device/samsung/manta" name="device/samsung/manta" groups="device,manta" />
-  <project path="device/hardkernel/odroidu" name="android_device_hardkernel_odroidu" remote="origin" revision="refs/tags/4412_v3.5" groups="device" />
-  <project path="device/hardkernel/odroidx" name="android_device_hardkernel_odroidx" remote="origin" revision="refs/tags/4412_v3.5" groups="device" />
-  <project path="device/hardkernel/odroidx2" name="android_device_hardkernel_odroidx2" remote="origin" revision="refs/tags/4412_v3.5" groups="device" />
-  <project path="device/hardkernel/proprietary" name="android_device_hardkernel_proprietary" remote="origin" revision="refs/tags/4412_v3.5" groups="device" >
+  <project path="device/hardkernel/odroidu" name="android_device_hardkernel_odroidu" remote="origin" revision="refs/heads/odroid_4412_master" groups="device" />
+  <project path="device/hardkernel/odroidx" name="android_device_hardkernel_odroidx" remote="origin" revision="refs/heads/odroid_4412_master" groups="device" />
+  <project path="device/hardkernel/odroidx2" name="android_device_hardkernel_odroidx2" remote="origin" revision="refs/heads/odroid_4412_master" groups="device" />
+  <project path="device/hardkernel/proprietary" name="android_device_hardkernel_proprietary" remote="origin" revision="refs/heads/odroid_4412_master" groups="device" >
     <copyfile src="build_android.sh" dest="build_android.sh" />
   </project>
   <project path="docs/source.android.com" name="platform/docs/source.android.com" />
@@ -161,7 +161,7 @@
   <project path="external/jsr305" name="platform/external/jsr305" />
   <project path="external/junit" name="platform/external/junit" />
   <project path="external/kernel-headers" name="platform/external/kernel-headers" />
-  <project path="external/koush/Superuser" name="Superuser" remote="origin" revision="refs/tags/4412_v3.5" />
+  <project path="external/koush/Superuser" name="Superuser" remote="origin" revision="refs/heads/odroid_4412_master" />
   <project path="external/koush/Widgets" name="Widgets" remote="github" revision="refs/heads/cm-11.0" />
   <project path="external/libcap-ng" name="platform/external/libcap-ng" />
   <project path="external/libffi" name="platform/external/libffi" />
@@ -255,21 +255,21 @@
   <project path="external/vim" name="android_external_vim" remote="github" revision="refs/heads/cm-11.0" />
   <project path="external/webp" name="platform/external/webp" />
   <project path="external/webrtc" name="platform/external/webrtc" groups="pdk" />
-  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="origin" revision="refs/tags/4412_v3.5" groups="pdk" />
+  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="origin" revision="refs/heads/odroid_4412_master" groups="pdk" />
   <project path="external/xmlwriter" name="platform/external/xmlwriter" />
   <project path="external/xmp_toolkit" name="platform/external/xmp_toolkit" />
   <project path="external/yaffs2" name="platform/external/yaffs2" groups="pdk" />
   <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
   <project path="external/zxing" name="platform/external/zxing" />
-  <project path="frameworks/av" name="android_frameworks_av" remote="origin" revision="refs/tags/4412_v3.5" groups="pdk" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="origin" revision="refs/tags/4412_v3.5" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="origin" revision="refs/heads/odroid_4412_master" groups="pdk" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="origin" revision="refs/heads/odroid_4412_master" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
   <project path="frameworks/ex" name="platform/frameworks/ex" />
   <project path="frameworks/mff" name="platform/frameworks/mff" />
   <project path="frameworks/ml" name="platform/frameworks/ml" />
-  <project path="frameworks/native" name="android_frameworks_native" remote="origin" revision="refs/tags/4412_v3.5" groups="pdk" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="origin" revision="refs/heads/odroid_4412_master" groups="pdk" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" />
   <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" />
   <project path="frameworks/opt/colorpicker" name="platform/frameworks/opt/colorpicker" />
@@ -293,10 +293,10 @@
   <project path="hardware/akm" name="platform/hardware/akm" />
   <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="broadcom_wlan" />
-  <project path="hardware/hardkernel" name="android_hardware_hardkernel" remote="origin" revision="refs/tags/4412_v3.5" />
+  <project path="hardware/hardkernel" name="android_hardware_hardkernel" remote="origin" revision="refs/heads/odroid_4412_master" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
-  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="origin" revision="refs/tags/4412_v3.5" groups="pdk" />
-  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="origin" revision="refs/tags/4412_v3.5" groups="pdk" />
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="origin" revision="refs/heads/odroid_4412_master" groups="pdk" />
+  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="origin" revision="refs/heads/odroid_4412_master" groups="pdk" />
   <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
   <project path="hardware/qcom/camera" name="platform/hardware/qcom/camera" groups="qcom" />
@@ -308,9 +308,9 @@
   <project path="hardware/qcom/power" name="platform/hardware/qcom/power" groups="qcom" />
   <project path="hardware/qcom/sensors" name="platform/hardware/qcom/sensors" groups="qcom" />
   <project path="hardware/qcom/wlan" name="platform/hardware/qcom/wlan" groups="qcom_wlan" />
-  <project path="hardware/realtek" name="android_hardware_realtek" remote="origin" revision="refs/tags/4412_v3.5" />
+  <project path="hardware/realtek" name="android_hardware_realtek" remote="origin" revision="refs/heads/odroid_4412_master" />
   <project path="hardware/ril" name="platform/hardware/ril" groups="pdk" />
-  <project path="hardware/samsung_slsi/exynos4" name="android_hardware_samsung_slsi_exynos4" remote="origin" revision="refs/tags/4412_v3.5" />
+  <project path="hardware/samsung_slsi/exynos4" name="android_hardware_samsung_slsi_exynos4" remote="origin" revision="refs/heads/odroid_4412_master" />
   <project path="hardware/samsung_slsi/exynos5" name="platform/hardware/samsung_slsi/exynos5" groups="exynos5" />
   <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" />
   <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx" groups="omap4" />
@@ -346,7 +346,7 @@
   <project path="packages/apps/Music" name="platform/packages/apps/Music" />
   <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" />
   <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" />
-  <project path="packages/apps/OdroidUpdater" name="android_packages_apps_OdroidUpdater" remote="origin" revision="refs/tags/4412_v3.5" />
+  <project path="packages/apps/OdroidUpdater" name="android_packages_apps_OdroidUpdater" remote="origin" revision="refs/heads/odroid_4412_master" />
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" />
   <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" />
   <project path="packages/apps/Phone" name="platform/packages/apps/Phone" />
@@ -354,15 +354,15 @@
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="origin" revision="refs/tags/4412_v3.5" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="origin" revision="refs/heads/odroid_4412_master" />
   <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
-  <project path="packages/apps/SoundRecorder" name="android_packages_apps_SoundRecorder" remote="origin" revision="refs/tags/4412_v3.5" />
+  <project path="packages/apps/SoundRecorder" name="android_packages_apps_SoundRecorder" remote="origin" revision="refs/heads/odroid_4412_master" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" />
   <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" />
   <project path="packages/apps/Stk" name="platform/packages/apps/Stk" />
   <project path="packages/apps/Tag" name="platform/packages/apps/Tag" />
   <project path="packages/apps/UnifiedEmail" name="platform/packages/apps/UnifiedEmail" />
-  <project path="packages/apps/Utility" name="android_packages_apps_Utility" remote="origin" revision="refs/tags/4412_v3.5" />
+  <project path="packages/apps/Utility" name="android_packages_apps_Utility" remote="origin" revision="refs/heads/odroid_4412_master" />
   <project path="packages/apps/VideoEditor" name="platform/packages/apps/VideoEditor" />
   <project path="packages/apps/VoiceDialer" name="platform/packages/apps/VoiceDialer" />
   <project path="packages/experimental" name="platform/packages/experimental" />
@@ -438,12 +438,12 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" />
-  <project path="system/core" name="android_system_core" remote= "origin" revision="refs/tags/4412_v3.5" groups="pdk" />
-  <project path="system/extras" name="android_system_extras" remote="origin" revision="refs/tags/4412_v3.5" groups="pdk" />
+  <project path="system/core" name="android_system_core" remote= "origin" revision="refs/heads/odroid_4412_master" groups="pdk" />
+  <project path="system/extras" name="android_system_extras" remote="origin" revision="refs/heads/odroid_4412_master" groups="pdk" />
   <project path="system/media" name="platform/system/media" groups="pdk" />
   <project path="system/netd" name="platform/system/netd" groups="pdk" />
   <project path="system/security" name="platform/system/security" groups="pdk" />
-  <project path="system/vold" name="android_system_vold" groups="pdk" remote="origin" revision="refs/tags/4412_v3.5" />
+  <project path="system/vold" name="android_system_vold" groups="pdk" remote="origin" revision="refs/heads/odroid_4412_master" />
   <project path="tools/adt/eclipse" name="platform/tools/adt/eclipse" groups="notdefault,tools" />
   <project path="tools/adt/idea" name="platform/tools/adt/idea" groups="notdefault,tools" />
   <project path="tools/base" name="platform/tools/base" groups="notdefault,tools" />
@@ -455,5 +455,5 @@
   <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" />
   <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
-  <project path="vendor/ralink" name="android_vendor_ralink" remote="origin" revision="refs/tags/4412_v3.5" />
+  <project path="vendor/ralink" name="android_vendor_ralink" remote="origin" revision="refs/heads/odroid_4412_master" />
 </manifest>
