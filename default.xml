@@ -468,5 +468,6 @@
   <project path="vendor/samsung_slsi" name="android_vendor_samsung_slsi" groups="pdk" remote="origin" revision="refs/heads/5422_4.4.4_master" >
     <copyfile src="script/build.sh" dest="build.sh"/>
   </project>
+  <project path="vendor/ralink" name="android_vendor_ralink" remote="origin" revision="refs/heads/5422_4.4.4_master" />
 
 </manifest>
