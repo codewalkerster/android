@@ -8,6 +8,9 @@
   <remote  name="manifest"
            fetch=".." />
 
+  <remote  name="hardkernel"
+           fetch="https://github.com/hardkernel/" />
+
   <remote  name="origin"
            fetch="https://github.com/codewalkerster/" />
 
@@ -73,11 +76,11 @@
   <project path="external/arduino" name="platform/external/arduino" />
   <project path="external/bison" name="platform/external/bison" groups="pdk" />
   <project path="external/blktrace" name="platform/external/blktrace" />
-  <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" groups="pdk" remote="CyanogenMod" revision="refs/heads/cm-11.0"/>
+  <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" groups="pdk" remote="origin" revision="1b62409affee3a0acfdc0188c9a28fcff681b541"/>
   <project path="external/bouncycastle" name="platform/external/bouncycastle" />
   <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" />
   <project path="external/bzip2" name="platform/external/bzip2" groups="pdk" />
-  <project path="external/busybox" name="android_external_busybox" remote="CyanogenMod" revision="d5b63cca67f555cd6e4c9b48ce5b1569620f199e" />
+  <project path="external/busybox" name="android_external_busybox" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="external/ceres-solver" name="platform/external/ceres-solver" />
   <project path="external/checkpolicy" name="platform/external/checkpolicy" groups="pdk" />
   <project path="external/chromium" name="platform/external/chromium" />
@@ -323,6 +326,7 @@
   <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx" groups="omap4" />
   <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" />
   <project path="hardware/ti/wpan" name="platform/hardware/ti/wpan" />
+  <project path="kernel/samsung/exynos5422" name="kernel/linux" remote="hardkernel" revision="refs/heads/odroidxu3-3.10.y-android" />
   <project path="libcore" name="platform/libcore" />
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk-java" />
   <project path="ndk" name="platform/ndk" />
@@ -468,5 +472,6 @@
   <project path="vendor/samsung_slsi" name="android_vendor_samsung_slsi" groups="pdk" remote="origin" revision="refs/tags/5422_4.4.4_v1.3" >
     <copyfile src="script/build.sh" dest="build.sh"/>
   </project>
+  <project path="vendor/ralink" name="android_vendor_ralink" remote="origin" revision="refs/tags/5422_4.4.4_v1.3" >
 
 </manifest>
