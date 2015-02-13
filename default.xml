@@ -2,21 +2,33 @@
 <manifest>
 
   <remote  name="aosp"
+           fetch="https://android.googlesource.com/"
+           review="https://android-review.googlesource.com/" />
+
+  <remote  name="manifest"
            fetch=".." />
+
+  <remote  name="hardkernel"
+           fetch="https://github.com/hardkernel/" />
+
+  <remote  name="origin"
+           fetch="https://github.com/codewalkerster/" />
+
   <default revision="refs/tags/android-4.4.2_r1"
            remote="aosp"
-           sync-j="4" />
+           sync-j="1" />
 
-  <project path="build" name="platform/build" groups="pdk" >
+  <project path="build" name="android_build" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" />
-  <project path="bionic" name="platform/bionic" groups="pdk" />
+  <project path="bionic" name="android_bionic" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" />
   <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller" />
-  <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
-  <project path="cts" name="platform/cts" groups="cts" />
+  <project path="bootable/recovery" name="android_bootable_recovery" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="bootable/uboot" name="u-boot" remote="hardkernel" revision="refs/heads/odroidc-v2011.03" />
+  <project path="cts" name="android_cts" groups="cts" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="dalvik" name="platform/dalvik" />
   <project path="developers/build" name="platform/developers/build" />
   <project path="developers/demos" name="platform/developers/demos" />
@@ -39,6 +51,9 @@
   <project path="device/generic/x86" name="device/generic/x86" groups="pdk" />
   <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" groups="device" />
   <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device" />
+  <project path="device/hardkernel/common" name="android_device_hardkernel_common" groups="device" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="device/hardkernel/odroidc" name="android_device_hardkernel_odroidc" groups="device" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="device/hardkernel/proprietary" name="android_device_hardkernel_proprietary" groups="device" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="device/lge/hammerhead" name="device/lge/hammerhead" groups="device,hammerhead" />
   <project path="device/lge/hammerhead-kernel" name="device/lge/hammerhead-kernel" groups="device,hammerhead" />
   <project path="device/lge/mako" name="device/lge/mako" groups="device,mako" />
@@ -47,6 +62,8 @@
   <project path="device/samsung/manta" name="device/samsung/manta" groups="device,manta" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
+  <project path="external/alsa-lib" name="android_external_alsa-lib" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="external/alsa-utils" name="android_external_alsa-utils" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/android-clat" name="platform/external/android-clat" />
   <project path="external/android-mock" name="platform/external/android-mock" />
   <project path="external/ant-glob" name="platform/external/ant-glob" />
@@ -58,9 +75,10 @@
   <project path="external/arduino" name="platform/external/arduino" />
   <project path="external/bison" name="platform/external/bison" groups="pdk" />
   <project path="external/blktrace" name="platform/external/blktrace" />
-  <project path="external/bluetooth/bluedroid" name="platform/external/bluetooth/bluedroid" groups="pdk" />
+  <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" groups="pdk" remote="origin" revision="1b62409affee3a0acfdc0188c9a28fcff681b541" />
   <project path="external/bouncycastle" name="platform/external/bouncycastle" />
   <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" />
+  <project path="external/busybox" name="android_external_busybox" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/bzip2" name="platform/external/bzip2" groups="pdk" />
   <project path="external/ceres-solver" name="platform/external/ceres-solver" />
   <project path="external/checkpolicy" name="platform/external/checkpolicy" groups="pdk" />
@@ -93,6 +111,7 @@
   <project path="external/chromium_org/v8" name="platform/external/chromium_org/v8" />
   <project path="external/clang" name="platform/external/clang" groups="pdk" />
   <project path="external/compiler-rt" name="platform/external/compiler-rt" groups="pdk" />
+  <project path="external/curl" name="android_external_curl" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/dexmaker" name="platform/external/dexmaker" />
   <project path="external/dhcpcd" name="platform/external/dhcpcd" />
   <project path="external/dnsmasq" name="platform/external/dnsmasq" groups="pdk" />
@@ -108,12 +127,17 @@
   <project path="external/embunit" name="platform/external/embunit" />
   <project path="external/emma" name="platform/external/emma" />
   <project path="external/esd" name="platform/external/esd" />
+  <project path="external/ethtool" name="android_external_ethtool" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="external/exfat" name="android_external_exfat" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/expat" name="platform/external/expat" groups="pdk" />
   <project path="external/eyes-free" name="platform/external/eyes-free" />
+  <project path="external/fat32lib" name="android_external_fat32lib" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/fdlibm" name="platform/external/fdlibm" />
-  <project path="external/flac" name="platform/external/flac" groups="pdk" />
+  <project path="external/ffmpeg" name="android_external_ffmpeg" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="external/flac" name="android_external_flac" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/freetype" name="platform/external/freetype" groups="pdk" />
-  <project path="external/fsck_msdos" name="platform/external/fsck_msdos" />
+  <project path="external/fsck_msdos" name="android_external_fsck_msdos" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="external/fuse" name="android_external_fuse" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/ganymed-ssh2" name="platform/external/ganymed-ssh2" />
   <project path="external/gcc-demangle" name="platform/external/gcc-demangle" groups="pdk" />
   <project path="external/genext2fs" name="platform/external/genext2fs" />
@@ -142,6 +166,8 @@
   <project path="external/jsilver" name="platform/external/jsilver" />
   <project path="external/jsr305" name="platform/external/jsr305" />
   <project path="external/junit" name="platform/external/junit" />
+  <project path="external/koush/Superuser" name="Superuser" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="external/koush/Widgets" name="Widgets" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/kernel-headers" name="platform/external/kernel-headers" />
   <project path="external/libcap-ng" name="platform/external/libcap-ng" />
   <project path="external/libffi" name="platform/external/libffi" />
@@ -158,13 +184,15 @@
   <project path="external/libppp" name="platform/external/libppp" />
   <project path="external/libselinux" name="platform/external/libselinux" groups="pdk" />
   <project path="external/libsepol" name="platform/external/libsepol" groups="pdk" />
-  <project path="external/libusb" name="platform/external/libusb" />
+  <project path="external/libssh2" name="android_external_libssh2" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="external/libusb" name="android_external_libusb" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/libusb-compat" name="platform/external/libusb-compat" />
   <project path="external/libvorbis" name="platform/external/libvorbis" />
   <project path="external/libvpx" name="platform/external/libvpx" groups="pdk" />
   <project path="external/libxml2" name="platform/external/libxml2" />
   <project path="external/libxslt" name="platform/external/libxslt" />
-  <project path="external/libyuv" name="platform/external/libyuv" groups="libyuv" />
+  <project path="external/libyuv" name="android_external_libyuv" groups="libyuv" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="external/libzvbi" name="android_external_libzvbi" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/linux-tools-perf" name="platform/external/linux-tools-perf" />
   <project path="external/littlemock" name="platform/external/littlemock" />
   <project path="external/llvm" name="platform/external/llvm" groups="pdk" />
@@ -173,7 +201,7 @@
   <project path="external/markdown" name="platform/external/markdown" />
   <project path="external/mdnsresponder" name="platform/external/mdnsresponder" groups="pdk" />
   <project path="external/mesa3d" name="platform/external/mesa3d" />
-  <project path="external/mksh" name="platform/external/mksh" groups="pdk" />
+  <project path="external/mksh" name="android_external_mksh" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/mockito" name="platform/external/mockito" />
   <project path="external/mockwebserver" name="platform/external/mockwebserver" />
   <project path="external/mp4parser" name="platform/external/mp4parser" />
@@ -185,6 +213,7 @@
   <project path="external/nist-pkits" name="platform/external/nist-pkits" />
   <project path="external/nist-sip" name="platform/external/nist-sip" />
   <project path="external/noto-fonts" name="platform/external/noto-fonts" />
+  <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/oauth" name="platform/external/oauth" />
   <project path="external/objenesis" name="platform/external/objenesis" />
   <project path="external/okhttp" name="platform/external/okhttp" />
@@ -192,15 +221,17 @@
   <project path="external/opencv" name="platform/external/opencv" />
   <project path="external/openfst" name="platform/external/openfst" />
   <project path="external/openssh" name="platform/external/openssh" />
-  <project path="external/openssl" name="platform/external/openssl" groups="pdk" />
+  <project path="external/openssl" name="android_external_openssl" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/oprofile" name="platform/external/oprofile" />
   <project path="external/pixman" name="platform/external/pixman" />
   <project path="external/ppp" name="platform/external/ppp" />
+  <project path="external/pppoe" name="android_external_pppoe" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/proguard" name="platform/external/proguard" groups="pdk-java" />
   <project path="external/protobuf" name="platform/external/protobuf" groups="pdk" />
   <project path="external/qemu" name="platform/external/qemu" />
   <project path="external/qemu-pc-bios" name="platform/external/qemu-pc-bios" />
   <project path="external/regex-re2" name="platform/external/regex-re2" />
+  <project path="external/remoteconf" name="android_external_remoteconf" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/replicaisland" name="platform/external/replicaisland" />
   <project path="external/robolectric" name="platform/external/robolectric" />
   <project path="external/safe-iop" name="platform/external/safe-iop" groups="pdk" />
@@ -208,12 +239,12 @@
   <project path="external/sepolicy" name="platform/external/sepolicy" groups="pdk" />
   <project path="external/sfntly" name="platform/external/sfntly" />
   <project path="external/sil-fonts" name="platform/external/sil-fonts" />
-  <project path="external/skia" name="platform/external/skia" />
+  <project path="external/skia" name="android_external_skia" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/smack" name="platform/external/smack" />
   <project path="external/smali" name="platform/external/smali" />
   <project path="external/sonivox" name="platform/external/sonivox" groups="pdk" />
   <project path="external/speex" name="platform/external/speex" groups="pdk" />
-  <project path="external/sqlite" name="platform/external/sqlite" groups="pdk" />
+  <project path="external/sqlite" name="android_external_sqlite" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/srec" name="platform/external/srec" />
   <project path="external/srtp" name="platform/external/srtp" />
   <project path="external/stlport" name="platform/external/stlport" groups="pdk" />
@@ -223,7 +254,7 @@
   <project path="external/tagsoup" name="platform/external/tagsoup" />
   <project path="external/tcpdump" name="platform/external/tcpdump" />
   <project path="external/timezonepicker-support" name="platform/external/timezonepicker-support" />
-  <project path="external/tinyalsa" name="platform/external/tinyalsa" groups="pdk" />
+  <project path="external/tinyalsa" name="android_external_tinyalsa" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/tinycompress" name="platform/external/tinycompress" groups="pdk" />
   <project path="external/tinyxml" name="platform/external/tinyxml" groups="pdk" />
   <project path="external/tinyxml2" name="platform/external/tinyxml2" groups="pdk" />
@@ -232,21 +263,21 @@
   <project path="external/valgrind" name="platform/external/valgrind" groups="pdk" />
   <project path="external/webp" name="platform/external/webp" />
   <project path="external/webrtc" name="platform/external/webrtc" groups="pdk" />
-  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" groups="pdk" />
+  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="external/xmlwriter" name="platform/external/xmlwriter" />
   <project path="external/xmp_toolkit" name="platform/external/xmp_toolkit" />
   <project path="external/yaffs2" name="platform/external/yaffs2" groups="pdk" />
   <project path="external/zlib" name="platform/external/zlib" groups="pdk" />
   <project path="external/zxing" name="platform/external/zxing" />
-  <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
-  <project path="frameworks/base" name="platform/frameworks/base" />
+  <project path="frameworks/av" name="android_frameworks_av" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
   <project path="frameworks/ex" name="platform/frameworks/ex" />
   <project path="frameworks/mff" name="platform/frameworks/mff" />
   <project path="frameworks/ml" name="platform/frameworks/ml" />
-  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
+  <project path="frameworks/native" name="android_frameworks_native" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" />
   <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" />
   <project path="frameworks/opt/colorpicker" name="platform/frameworks/opt/colorpicker" />
@@ -259,7 +290,7 @@
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" />
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" />
   <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
-  <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" />
+  <project path="frameworks/opt/vcard" name="android_frameworks_opt_vcard" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="frameworks/rs" name="platform/frameworks/rs" groups="pdk" />
   <project path="frameworks/support" name="platform/frameworks/support" />
   <project path="frameworks/testing" name="platform/frameworks/testing" />
@@ -268,11 +299,23 @@
   <project path="frameworks/webview" name="platform/frameworks/webview" />
   <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" />
   <project path="hardware/akm" name="platform/hardware/akm" />
-  <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />
+  <project path="hardware/alsa_sound" name="android_hardware_alsa_sound" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/amlogic/audio" name="android_hardware_amlogic_audio" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/amlogic/camera" name="android_hardware_amlogic_camera" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/amlogic/gralloc" name="android_hardware_amlogic_gralloc" groups="amlogic"  remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/amlogic/hwcomposer" name="android_hardware_amlogic_hwcomposer" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/amlogic/libstagefrighthw" name="android_hardware_amlogic_libstagefrighthw" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/amlogic/mali" name="android_hardware_amlogic_mali" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/amlogic/screen_source" name="android_hardware_amlogic_screen_source" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/amlogic/usbctrl" name="android_hardware_amlogic_usbctrl" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/amlogic/wifi" name="android_hardware_amlogic_wifi" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/arm/gpu" name="android_hardware_arm_gpu" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="broadcom_wlan" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
-  <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
-  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
+  <project path="hardware/hardkernel/libodroid-gps" name="android_hardware_hardkernel_libodroid-gps" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/libhardware" name="android_hardware_libhardware" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
   <project path="hardware/qcom/camera" name="platform/hardware/qcom/camera" groups="qcom" />
@@ -290,16 +333,23 @@
   <project path="hardware/ti/omap4xxx" name="platform/hardware/ti/omap4xxx" groups="omap4" />
   <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" />
   <project path="hardware/ti/wpan" name="platform/hardware/ti/wpan" />
+  <project path="hardware/wifi/realtek/drivers/8192cu" name="android_hardware_wifi_realtek_drivers_8192cu" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/wifi/realtek/drivers/8192du" name="android_hardware_wifi_realtek_drivers_8192du" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/wifi/ralink/drivers/rt2870" name="android_vendor_ralink" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="kernel" name="linux" remote="hardkernel" revision="refs/heads/odroidc-3.10.y-android" />
   <project path="libcore" name="platform/libcore" />
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk-java" />
   <project path="ndk" name="platform/ndk" />
+  <project path="packages/amlogic/LibPlayer" name="android_packages_amlogic_LibPlayer" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="packages/amlogic/NativeImagePlayer" name="android_packages_amlogic_NativeImagePlayer" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="packages/amlogic/SubTitle" name="android_packages_amlogic_SubTitle" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" />
-  <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" />
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="packages/apps/Browser" name="platform/packages/apps/Browser" />
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
   <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
-  <project path="packages/apps/Camera" name="platform/packages/apps/Camera" />
-  <project path="packages/apps/Camera2" name="platform/packages/apps/Camera2" />
+  <project path="packages/apps/Camera" name="android_packages_apps_Camera" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="packages/apps/CellBroadcastReceiver" name="platform/packages/apps/CellBroadcastReceiver" />
   <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" />
   <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" />
@@ -327,14 +377,16 @@
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
   <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
-  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
-  <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
+  <project path="packages/apps/SoundRecorder" name="android_packages_apps_SoundRecorder" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" />
   <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" />
   <project path="packages/apps/Stk" name="platform/packages/apps/Stk" />
   <project path="packages/apps/Tag" name="platform/packages/apps/Tag" />
+  <project path="packages/apps/OdroidUpdater" name="android_packages_apps_OdroidUpdater" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="packages/apps/UnifiedEmail" name="platform/packages/apps/UnifiedEmail" />
+  <project path="packages/apps/Utility" name="android_packages_apps_Utility" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="packages/apps/VideoEditor" name="platform/packages/apps/VideoEditor" />
   <project path="packages/apps/VoiceDialer" name="platform/packages/apps/VoiceDialer" />
   <project path="packages/experimental" name="platform/packages/experimental" />
@@ -410,12 +462,12 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" />
-  <project path="system/core" name="platform/system/core" groups="pdk" />
-  <project path="system/extras" name="platform/system/extras" groups="pdk" />
+  <project path="system/core" name="android_system_core" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="system/extras" name="android_system_extras" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="system/media" name="platform/system/media" groups="pdk" />
   <project path="system/netd" name="platform/system/netd" groups="pdk" />
   <project path="system/security" name="platform/system/security" groups="pdk" />
-  <project path="system/vold" name="platform/system/vold" groups="pdk" />
+  <project path="system/vold" name="android_system_vold" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="tools/adt/eclipse" name="platform/tools/adt/eclipse" groups="notdefault,tools" />
   <project path="tools/adt/idea" name="platform/tools/adt/idea" groups="notdefault,tools" />
   <project path="tools/base" name="platform/tools/base" groups="notdefault,tools" />
