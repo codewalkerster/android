@@ -306,6 +306,7 @@
   <project path="hardware/amlogic/hwcomposer" name="android_hardware_amlogic_hwcomposer" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="hardware/amlogic/libstagefrighthw" name="android_hardware_amlogic_libstagefrighthw" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="hardware/amlogic/mali" name="android_hardware_amlogic_mali" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/backports" name="android_hardware_backports" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="hardware/amlogic/screen_source" name="android_hardware_amlogic_screen_source" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="hardware/amlogic/usbctrl" name="android_hardware_amlogic_usbctrl" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="hardware/amlogic/wifi" name="android_hardware_amlogic_wifi" groups="amlogic" remote="origin" revision="refs/heads/s805_4.4.2_master" />
