@@ -29,7 +29,7 @@
   <project path="bootable/recovery" name="android_bootable_recovery" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="bootable/uboot" name="u-boot" remote="hardkernel" revision="refs/heads/odroidc-v2011.03" />
   <project path="cts" name="android_cts" groups="cts" remote="origin" revision="refs/heads/s805_4.4.2_master" />
-  <project path="dalvik" name="platform/dalvik" />
+  <project path="dalvik" name="android_dalvik" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="developers/build" name="platform/developers/build" />
   <project path="developers/demos" name="platform/developers/demos" />
   <project path="developers/docs" name="platform/developers/docs" />
