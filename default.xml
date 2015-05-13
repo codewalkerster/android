@@ -14,10 +14,6 @@
   <remote  name="origin"
            fetch="https://github.com/codewalkerster/" />
 
-  <remote  name="CyanogenMod"
-           fetch="https://github.com/CyanogenMod"
-           review="review.cyanogenmod.org" />
-
   <default revision="refs/tags/android-4.4.4_r2"
            remote="aosp"
            sync-j="4" />
@@ -119,7 +115,7 @@
   <project path="external/doclava" name="platform/external/doclava" />
   <project path="external/dropbear" name="platform/external/dropbear" />
   <project path="external/droiddriver" name="platform/external/droiddriver" />
-  <project path="external/e2fsprogs" name="android_external_e2fsprogs" groups="pdk" remote="CyanogenMod" revision="refs/heads/cm-11.0" />
+  <project path="external/e2fsprogs" name="android_external_e2fsprogs" groups="pdk" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="external/easymock" name="platform/external/easymock" />
   <project path="external/eclipse-basebuilder" name="platform/external/eclipse-basebuilder" />
   <project path="external/eclipse-windowbuilder" name="platform/external/eclipse-windowbuilder" />
@@ -128,14 +124,14 @@
   <project path="external/embunit" name="platform/external/embunit" />
   <project path="external/emma" name="platform/external/emma" />
   <project path="external/esd" name="platform/external/esd" />
-  <project path="external/exfat" name="android_external_exfat" remote="CyanogenMod" revision="refs/heads/cm-11.0" />
+  <project path="external/exfat" name="android_external_exfat" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="external/expat" name="platform/external/expat" groups="pdk" />
   <project path="external/eyes-free" name="platform/external/eyes-free" />
   <project path="external/fdlibm" name="platform/external/fdlibm" />
   <project path="external/flac" name="platform/external/flac" groups="pdk" />
   <project path="external/freetype" name="platform/external/freetype" groups="pdk" />
-  <project path="external/fsck_msdos" name="android_external_fsck_msdos" remote="CyanogenMod" revision="refs/heads/cm-11.0" />
-  <project path="external/fuse" name="android_external_fuse" remote="CyanogenMod" revision="refs/heads/cm-11.0" />
+  <project path="external/fsck_msdos" name="android_external_fsck_msdos" remote="origin" revision="refs/heads/5422_4.4.4_master" />
+  <project path="external/fuse" name="android_external_fuse" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="external/ganymed-ssh2" name="platform/external/ganymed-ssh2" />
   <project path="external/gcc-demangle" name="platform/external/gcc-demangle" groups="pdk" />
   <project path="external/genext2fs" name="platform/external/genext2fs" />
@@ -166,14 +162,14 @@
   <project path="external/junit" name="platform/external/junit" />
   <project path="external/kernel-headers" name="platform/external/kernel-headers" />
   <project path="external/koush/Superuser" name="Superuser" remote="origin" revision="refs/heads/5422_4.4.4_master" />
-  <project path="external/koush/Widgets" name="Widgets" remote="CyanogenMod" revision="refs/heads/cm-11.0" />
+  <project path="external/koush/Widgets" name="Widgets" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="external/libcap-ng" name="platform/external/libcap-ng" />
   <project path="external/libexif" name="platform/external/libexif" />
   <project path="external/libffi" name="platform/external/libffi" />
   <project path="external/libgsm" name="platform/external/libgsm" groups="pdk" />
   <project path="external/liblzf" name="platform/external/liblzf" groups="pdk" />
   <project path="external/libmtp" name="platform/external/libmtp" />
-  <project path="external/libncurses" name="android_external_libncurses" remote="CyanogenMod" revision="refs/heads/cm-11.0" />
+  <project path="external/libncurses" name="android_external_libncurses" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="external/libnfc-nci" name="platform/external/libnfc-nci" groups="pdk" />
   <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" groups="pdk" />
   <project path="external/libnl-headers" name="platform/external/libnl-headers" groups="pdk" />
@@ -185,7 +181,7 @@
   <project path="external/libselinux" name="platform/external/libselinux" groups="pdk" />
   <project path="external/libsepol" name="platform/external/libsepol" groups="pdk" />
   <project path="external/libssh2" name="platform/external/libssh2" />
-  <project path="external/libusb" name="android_external_libusb" remote="CyanogenMod" revision="refs/heads/cm-11.0" />
+  <project path="external/libusb" name="android_external_libusb" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="external/libusb-compat" name="platform/external/libusb-compat" />
   <project path="external/libvorbis" name="platform/external/libvorbis" />
   <project path="external/libvpx" name="platform/external/libvpx" groups="pdk" />
@@ -212,7 +208,7 @@
   <project path="external/nist-pkits" name="platform/external/nist-pkits" />
   <project path="external/nist-sip" name="platform/external/nist-sip" />
   <project path="external/noto-fonts" name="platform/external/noto-fonts" />
-  <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="CyanogenMod" revision="refs/heads/cm-11.0" />
+  <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="external/oauth" name="platform/external/oauth" />
   <project path="external/objenesis" name="platform/external/objenesis" />
   <project path="external/okhttp" name="platform/external/okhttp" />
@@ -258,7 +254,7 @@
   <project path="external/tremolo" name="platform/external/tremolo" groups="pdk" />
   <project path="external/v8" name="platform/external/v8" />
   <project path="external/valgrind" name="platform/external/valgrind" groups="pdk" />
-  <project path="external/vim" name="android_external_vim" remote="CyanogenMod" revision="refs/heads/cm-11.0" />
+  <project path="external/vim" name="android_external_vim" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="external/webp" name="platform/external/webp" />
   <project path="external/webrtc" name="platform/external/webrtc" groups="pdk" />
   <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="origin" revision="refs/heads/5422_4.4.4_master" groups="pdk" />
@@ -299,7 +295,7 @@
   <project path="hardware/akm" name="platform/hardware/akm" />
   <project path="hardware/amlogic/wifi" name="android_hardware_amlogic_wifi" groups="amlogic" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="hardware/backports" name="android_hardware_backports" remote="origin" revision="refs/heads/5422_4.4.4_master" />
-  <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" groups="pdk" remote="CyanogenMod" revision="refs/heads/cm-11.0" />
+  <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" groups="pdk" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="broadcom_wlan" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
   <project path="hardware/libhardware" name="android_hardware_libhardware" groups="pdk" remote="origin" revision="refs/heads/5422_4.4.4_master" />
