@@ -164,6 +164,7 @@
   <project path="external/koush/Superuser" name="Superuser" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="external/koush/Widgets" name="Widgets" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="external/libcap-ng" name="platform/external/libcap-ng" />
+  <project path="external/libcec" name="android_external_libcec" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="external/libexif" name="platform/external/libexif" />
   <project path="external/libffi" name="platform/external/libffi" />
   <project path="external/libgsm" name="platform/external/libgsm" groups="pdk" />
