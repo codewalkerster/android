@@ -303,6 +303,7 @@
   <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" groups="pdk" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="hardware/hardkernel/libaudio" name="android_hardware_hardkernel_libaudio" groups="pdk" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="hardware/hardkernel/libcamera" name="android_hardware_hardkernel_libcamera" groups="pdk" remote="origin" revision="refs/heads/5422_4.4.4_master" />
+  <project path="hardware/hardkernel/libsensor" name="android_hardware_hardkernel_libsensor" groups="pdk" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="hardware/hardkernel/gps-glonass-android-driver" name="gps-glonass-android-driver" groups="pdk" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
