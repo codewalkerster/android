@@ -315,6 +315,7 @@
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="broadcom_wlan" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
   <project path="hardware/hardkernel/gps-glonass-android-driver" name="gps-glonass-android-driver" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
+  <project path="hardware/hardkernel/libsensor" name="android_hardware_hardkernel_libsensor" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="hardware/libhardware" name="android_hardware_libhardware" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" groups="pdk" remote="origin" revision="refs/heads/s805_4.4.2_master" />
   <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom" />
