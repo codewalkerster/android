@@ -300,6 +300,7 @@
   <project path="hardware/amlogic/wifi" name="android_hardware_amlogic_wifi" groups="amlogic" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="hardware/backports" name="android_hardware_backports" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" groups="pdk" remote="origin" revision="refs/heads/5422_4.4.4_master" />
+  <project path="hardware/broadcom/libbt" name="android_hardware_realtek_libbt" groups="pdk" remote="origin" revision="refs/heads/5422_4.4.4_master" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="broadcom_wlan" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
   <project path="hardware/libhardware" name="android_hardware_libhardware" groups="pdk" remote="origin" revision="refs/heads/5422_4.4.4_master" />
